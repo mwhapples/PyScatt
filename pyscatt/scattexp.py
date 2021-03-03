@@ -5,8 +5,6 @@ def print_use():
   print("Usage: scattexp <filename.scatt>")
 
 def main(filename):
-  if len(sys.argv) < 2:
-    print_use()
   print("Loading file " + filename)
   scattdoc = comtypes.client.CreateObject("ScattDoc.ScattDocument")
   scattdoc.FileName = filename
