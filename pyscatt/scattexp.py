@@ -4,13 +4,12 @@ import comtypes.client
 def print_use():
   print("Usage: scattexp <filename.scatt>")
 
-def main():
+def main(filename):
   if len(sys.argv) < 2:
     print_use()
-    return 1
-  print("Loading file " + sys.argv[1])
+  print("Loading file " + filename)
   scattdoc = comtypes.client.CreateObject("ScattDoc.ScattDocument")
-  scattdoc.FileName = sys.argv[1]
+  scattdoc.FileName = filename
   scattdoc.Load()
   if not scattdoc.Valid:
     print("Problem loading file")
@@ -22,4 +21,7 @@ if __name__ == '__main__':
   if sys.platform != "win32" or sys.maxsize > 2**32:
     print("This application needs to be run with a 32-bit python on Windows")
     sys.exit(1)
-  sys.exit(main())
+  if len(sys.argv) < 2:
+    print_use()
+    sys.exit(1)
+  sys.exit(main(sys.argv[1]))
