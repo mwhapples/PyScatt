@@ -1,0 +1,27 @@
+name: pyscatt
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2021.1.19=h9f7ea03_1
+  - certifi=2020.12.5=py39h9f7ea03_0
+  - comtypes=1.1.9=py39h9f7ea03_1002
+  - openssl=1.1.1j=hc431981_0
+  - pip=21.0.1=py39h9f7ea03_0
+  - python=3.9.2=h53c7b84_0
+  - setuptools=52.0.0=py39h9f7ea03_0
+  - sqlite=3.35.2=hc431981_0
+  - tzdata=2020f=h52ac0ba_0
+  - vc=14.2=h21ff451_1
+  - vs2015_runtime=14.27.29016=h5e58377_2
+  - wheel=0.36.2=pyhd3eb1b0_0
+  - wincertstore=0.2=py39hc431981_0
+  - pip:
+    - altgraph==0.17
+    - future==0.18.2
+    - pefile==2019.4.18
+    - pyinstaller==4.2
+    - pyinstaller-hooks-contrib==2021.1
+    - pywin32-ctypes==0.2.0
+variables:
+  CONDA_SUBDIR: win-32
+prefix: C:\conda\miniconda3\envs\pyscatt
